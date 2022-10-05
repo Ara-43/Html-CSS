@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+
+<body>
+    <section id="main-section">
+        <div id="formulario" class="section">
+            <form action="/controlador-registro" method="POST" class="form-registro" id="form-registro"
+                enctype="multipart/form-data">
+                <h1>Registrar un Usuario</h1>
+                <div class="form-group">
+                    <label for="Nombre">Nombre de usuario<br></label>
+                    <input type="text" class="input input-text" name="nombre" required placeholder="Pepito123" />
+
+                </div>
+                <div class="form-group">
+                    <label for="contrasena" class="contrasena">Contraseña<br></label>
+                    <input type="password" class="input" name="contrasena" pattern=".{8,}"
+                        placeholder="Ingrese al menos 8 dígitos" />
+                </div>
+
+        </div>
+        <div class="form-group">
+            <label for="Edad" class="Edad">Edad del usuario<br></label>
+            <input type="age" class="input" name="Edad" pattern=".{2,}" placeholder="" />
+        </div>
+
+        <div class="form-group">
+            <label for="fecha">Fecha de nacimiento del usuario<br></label>
+            <input type="date" name="fecha-inicio" min="1900-01-01" max="2020-06-20" />
+        </div>
+
+        </div>
+        <div class="form-group">
+            <label for="Sexo">Sexo del usuario <br></label>
+            <label for="radio-input">Hombre</label>
+            <input type="checkbox" />
+            <label for="radio-input"><br>Mujer</label>
+            <input type="checkbox" />
+            <label for="radio-input"><br>Prefiero no decir</label>
+            <input type="checkbox" />
+        </div>
+
+        <div class="form-group">
+            <label for="pais">País nacimiento del usuario <br></label>
+            <select name="pais" id="pais" class="input">
+                <option value="arg">Argentina</option>
+                <option value="chi">Chile</option>
+                <option value="brz">Brazil</option>
+                <option value="brz">otro</option>
+            </select>
+        </div>
+
+        <button type="submit" class="link btn">Enviar</button>
+        <button type="submit" class="link btn">Borrar</button>
+        </form>
+        </div>
+    </section>
+</body>
+
+</html>
